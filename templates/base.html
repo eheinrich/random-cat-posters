@@ -2,13 +2,13 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>CS Kitties</title>
+    <title>Techie Cats</title>
     <link rel="stylesheet" type="text/css" href="/static/style.css">
 </head>
 <body>
     <a href="/">Home page</a>
     {% if session.username %}
-    <span>Hello, {{ session.username }}!</span>
+    <span>Logged in as {{ session.username }}</span>
     <a href="/favorites">View my favorites</a>
     <a href="/logout">Logout</a>
     {% else %}
