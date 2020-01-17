@@ -1,10 +1,10 @@
 {% extends "base.html" %}
 {% block title %}
-CS Kitties
+Techie Cats
 {% endblock %}
 {% block content %}
 {% if session.username %}
-<form action="/save-favorite" method="get">
+<form action="/save-favorite" method="post">
     <input type="hidden" name="url" value="{{ url }}">
     <input type="hidden" name="quote" value="{{ quote }}">
     <button type="submit">Save to favorites</button>

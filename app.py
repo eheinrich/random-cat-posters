@@ -45,11 +45,11 @@ def index():
     return render_template('index.html', url=get_cat_picture(), quote=get_quote())
 
 
-@app.route('/save-favorite')
+@app.route('/save-favorite', methods=['POST'])
 def save_favorite():
     user = User.query.filter_by(username=session.get('username')).first()
-    url = request.args.get('url')
-    quote = request.args.get('quote')
+    url = request.form.get('url')
+    quote = request.form.get('quote')
     if user and url and quote:
         favorite = Favorite(picture_url=url, quote=quote, user_id=user.id)
         db.session.add(favorite)
@@ -77,7 +77,7 @@ def login():
             flash('You do not have an account. Please register one.')
             return redirect(url_for('register'))
         if not check_password_hash(user.password, password):
-            flash('Incorrect password, try again')
+            flash('Incorrect password, try again.')
             return redirect(url_for('login'))
         session['username'] = user.username
         return redirect(url_for('index'))
