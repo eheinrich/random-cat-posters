@@ -1,10 +1,10 @@
-# techie-cats
-Random tech-themed cat poster generation
+# random-cat-posters
+Random cat poster generation
 
-This app gets a random computer science-y quote and a random cat 
+This app gets a random quote and a random cat
 picture and mashes them together to make some cat poster magic.
 
-Quotes courtesy of an API provided by [Storm Consultancy](http://quotes.stormconsultancy.co.uk/)
+Quotes courtesy of an API provided by [https://random-math-quote-api.herokuapp.com/](https://random-math-quote-api.herokuapp.com/)
 and cat pictures are pulled from [TheCatAPI](https://thecatapi.com/).
 
 ## Requirements

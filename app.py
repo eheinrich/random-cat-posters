@@ -34,8 +34,8 @@ def get_cat_picture():
 
 
 def get_quote():
-    # Funny CS quotes
-    url = 'http://quotes.stormconsultancy.co.uk/random.json'
+    # Random math quotes
+    url = 'https://random-math-quote-api.herokuapp.com/'
     quote_api_response = requests.get(url).json()
     return f'{quote_api_response["quote"]} - {quote_api_response["author"]}'
 
